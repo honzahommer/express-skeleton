@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+
+'use strict';
+
+const pkg = require('../package')
+const app = require('../app')()
+
+let serve = app.listen(app.get('config').app.port, () => { 
+  console.log(pkg.name, 'listening on port', serve.address().port)
+})

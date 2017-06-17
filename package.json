@@ -1,0 +1,31 @@
+{
+  "name": "express-skeleton",
+  "version": "0.0.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/honzahommer/express-skeleton.git"
+  },
+  "scripts": {
+    "start": "node bin/server"
+  },
+  "author": "Honza Hommer <honza@hommer.cz>",
+  "homepage": "https://github.com/honzahommer/express-skeleton#README",
+  "engines": {
+    "node": ">= 8.1.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.14.0",
+    "bootstrap": "^4.0.0-alpha.6",
+    "cookie-parser": "~1.0.1",
+    "deep-extend": "^0.5.0",
+    "express": "^4.15.3",
+    "express-handlebars": "^3.0.0",
+    "express-load": "^1.1.15",
+    "express-minify": "^0.2.0",
+    "handlebars-helpers": "^0.8.2",
+    "helmet": "^0.4.2",
+    "morgan": "^1.6.1",
+    "rotating-file-stream": "^1.2.2"
+  }
+}
