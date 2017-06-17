@@ -11,7 +11,7 @@ module.exports = {
   apps: [
     {
     name: pkg.name,
-    script: pkg.start,
+    script: pkg.scripts.start.split(' ').pop(),
       env: {
         NODE_ENV: 'dev'
       },
