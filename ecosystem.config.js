@@ -5,7 +5,7 @@ const APP_DEPLOY_USER = ENV.APP_DEPLOY_USER || ENV.USERNAME
 const APP_DEPLOY_REPO = ENV.APP_DEPLOY_REPO || pkg.repository.url
 const APP_DEPLOY_REF  = ENV.APP_DEPLOY_REF  || 'origin/master'
 const APP_DEPLOY_HOST = ENV.APP_DEPLOY_HOST || 'localhost'
-const APP_DEPLOY_PATH = ENV.APP_DEPLOY_PATH || '~' + APP_DEPLOY_USER + '/app/' + pkg.name
+const APP_DEPLOY_PATH = ENV.APP_DEPLOY_PATH || ('~' + APP_DEPLOY_USER + '/app/' + pkg.name)
 const APP_DEPLOY_CMND = ENV.APP_DEPLOY_CMND || 'npm install && pm2 reload ecosystem.config.js'
 
 module.exports = {
@@ -15,7 +15,7 @@ module.exports = {
     script: pkg.start,
       env: {
         NODE_ENV: 'dev'
-      }
+      },
       env_production: {
         NODE_ENV: 'production'
       }
@@ -36,7 +36,7 @@ module.exports = {
       ref:  APP_DEPLOY_REF,
       repo: APP_DEPLOY_REPO,
       path: APP_DEPLOY_PATH + '/dev',
-      'post-deploy' : APP_DEPLOY_CMND + ' --env dev',
+      'post-deploy' : APP_DEPLOY_CMND + ' --env dev'
     }
   }
 }
